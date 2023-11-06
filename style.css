@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*colores genrales*/
+:root{
+    --black:#0000;
+    --white: #ffffffff;
+    --picton-blue: #00a7e1ff;
+    --rich-black: #00171fff;
+    --prussian-blue: #003459ff;
+    --green-light:#0dff00;
+
+--gradient-top: linear-gradient(0deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-right: linear-gradient(90deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-bottom: linear-gradient(180deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-left: linear-gradient(270deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-top-right: linear-gradient(45deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-bottom-right: linear-gradient(135deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-top-left: linear-gradient(225deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-bottom-left: linear-gradient(315deg, #ffffffff, #00a7e1ff, #00171fff, #003459ff);
+--gradient-radial: radial-gradient(#ffffffff, #00a7e1ff, #00171fff, #003459ff);
+
+--facebook: #0700e1;
+--instagram:  linear-gradient(25deg, #f1ea27, #ff0000a9, #e16d00, #a504d6, rgb(235, 13, 231));
+--linkedin:#0700e1;
+
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+/* Small devices (phones, 576px and up)*/
+@media (min-width: 300px ){ 
+    .navbar-brand{
+        background-color:var(--prussian-blue);
+        border-radius: 20px;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 10px,
+                    inset 0px 0px 5px;
+        font-family: 'Hachi Maru Pop', cursive;
+    }
+    .txt_logo a{
+        color: var(--white);
+        font-size: 1.5em;
+        transition: .5s;
+    }
+    .txt_logo a:hover{
+        transition: .5s;
+        color: var(--rich-black);
+        background-color: var(--picton-blue);
+    }
+    .navbar{
+        background-color: var(--picton-blue);
+        font-family: 'Hachi Maru Pop', cursive;
+    }
+    .nav-item a{
+        font-size: 2em;
+        color: var(--white);
+        font-family: 'Hachi Maru Pop', cursive;
+    }
+    .dropdown-menu li a{
+        background-color: var(--white);
+        color: var(--picton-blue);
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    /*Seccion principar de presentacion*/
+    #inicio{
+        height: 700px;
+        padding: 80px 0px;
+        background-color: var(--rich-black);
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    #inicio h1{
+        color: var(--picton-blue);
+        font-size: 3em;
+        padding-top: 5vh;
+    }
+    .p_1{
+        color: var(--white);
+        font-size: 2.5em;
+    }
+
+    .p_2{
+        color: var(--white);
+        font-size: 2.7em;
+    }
+
+    .emoji{
+        height: 200px;
+    }
+
+    
+/* FONDO ANIMADO */
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: absolute;
+    width:100%;
+    height: 700px;
+    top: 0;
+    left: 0;
+    background: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background span {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 20vmin;
+    backface-visibility: hidden;
+    position:absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+    color: #0000005b;
+    top: 62%;
+    left: 97%;
+    animation-duration: 24s;
+    animation-delay: -30s;
+    transform-origin: 24vw -11vh;
+    box-shadow: 40vmin 0 5.080854492676361vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: var(--prussian-blue);
+    top: 38%;
+    left: 50%;
+    animation-duration: 53s;
+    animation-delay: -35s;
+    transform-origin: 25vw 0vh;
+    box-shadow: 40vmin 0 5.431852093789711vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: var(--prussian-blue);
+    top: 51%;
+    left: 18%;
+    animation-duration: 28s;
+    animation-delay: -40s;
+    transform-origin: -12vw 6vh;
+    box-shadow: -40vmin 0 5.690390594618619vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ffffff78;
+    top: 29%;
+    left: 58%;
+    animation-duration: 40s;
+    animation-delay: -25s;
+    transform-origin: 13vw 2vh;
+    box-shadow: 40vmin 0 5.3770206401593965vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #ffffff78;
+    top: 7%;
+    left: 17%;
+    animation-duration: 8s;
+    animation-delay: -33s;
+    transform-origin: 0vw -17vh;
+    box-shadow: 40vmin 0 5.936296788318046vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: var(--prussian-blue);
+    top: 84%;
+    left: 80%;
+    animation-duration: 13s;
+    animation-delay: -40s;
+    transform-origin: 25vw -6vh;
+    box-shadow: -40vmin 0 5.980110931871683vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: var(--rich-black);
+    top: 98%;
+    left: 52%;
+    animation-duration: 7s;
+    animation-delay: -42s;
+    transform-origin: 7vw -23vh;
+    box-shadow: -40vmin 0 5.852801352791785vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: var(--picton-blue);
+    top: 63%;
+    left: 38%;
+    animation-duration: 46s;
+    animation-delay: -7s;
+    transform-origin: 8vw -19vh;
+    box-shadow: 40vmin 0 5.202151840025595vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: var(--rich-black);
+    top: 39%;
+    left: 19%;
+    animation-duration: 47s;
+    animation-delay: -50s;
+    transform-origin: -23vw 16vh;
+    box-shadow: 40vmin 0 5.98965432999371vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: var(--rich-black);
+    top: 57%;
+    left: 33%;
+    animation-duration: 21s;
+    animation-delay: -26s;
+    transform-origin: 25vw -5vh;
+    box-shadow: -40vmin 0 5.876215277585935vmin currentColor;
+}
+.background span:nth-child(10) {
+    color: var(--picton-blue);
+    top: 18%;
+    left: 4%;
+    animation-duration: 55s;
+    animation-delay: -20s;
+    transform-origin: 22vw -8vh;
+    box-shadow: 40vmin 0 5.6085791739720365vmin currentColor;
+}
+
+
+
+
+
+    /*SECCION "Quien soy"*/
+    #about{
+        padding: 80px 10px;
+        height:fit-content;
+        background:  linear-gradient(180deg, #ffffffff,  #00a9e131,  #00a9e131, #ffffffff);
+        font-family: 'Hachi Maru Pop', cursive;
+        box-shadow: 0px 5px 20px #ffffff;
+        text-align: center;
+    }
+    #about .h2{
+        color: var(--picton-blue);
+        font-size: 3em;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .about_p{
+        color: var(--prussian-blue);
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 5px 20px;
+    }
+
+
+    /*SKILLS*/
+    #skills{
+        background-color: var(--prussian-blue);
+        height: fit-content;
+        padding: 80px 0px;
+        font-family: 'Hachi Maru Pop', cursive;
+        box-shadow: 0px 5px 20px #000;
+    }
+    #skills h3{
+        font-size: 3em;
+        text-align: center;
+        font-weight: bold;
+        color: var(--picton-blue);
+    }
+    .skill_p{
+        font-size: 1.5em;
+        color: var(--white);
+        padding: 10px 30px;
+        text-align: center;
+    }
+
+    /*barras*/
+    .caja-padre{
+        margin: 30px 10px;
+        padding: 10px 30px;
+    }
+
+    .sk-contenedor{
+        padding: 20px 15px;
+        background-color: var(--white);
+        border-radius: 30px;
+        border: solid 1px var(--picton-blue);
+        box-shadow: 0px 0px 100px var(--picton-blue);
+        font-family: 'Hachi Maru Pop', cursive;
+    }
+
+    .sk-barras:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+    .detalles{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        position: relative;
+        border: solid 1px var(--picton-blue);
+        border-radius: 10px;
+    }
+
+    .menu div{
+        position: relative;
+        width: 0;
+        height: 5px;
+        border-radius: 10px;
+        background-color: var(--picton-blue);
+    }
+
+
+    /*animacion de barras*/
+    #html-menu{
+        animation: html-barra 2s forwards;
+    }
+    @keyframes html-barra{
+        100%{
+            width: 90%;
+        }
+    }
+
+    #css-menu{
+        animation: css-barra 2s forwards;
+    }
+    @keyframes css-barra{
+        100%{
+            width: 75%;
+        }
+    }
+
+    #js-menu{
+        animation: js-barra 2s forwards;
+    }
+    @keyframes js-barra{
+        100%{
+            width: 50%;
+        }
+    }
+
+    #java-menu{
+        animation: java-barra 2s forwards;
+    }
+    @keyframes java-barra{
+        100%{
+            width: 40%;
+        }
+    }
+
+    #sql-menu{
+        animation: sql-barra 2s forwards;
+    }
+    @keyframes sql-barra{
+        100%{
+            width: 30%;
+        }
+    }
+
+    /*SECCION DE CONTACTO -- EMAIL Y REDES SOCIALES*/
+    #contacto{
+        padding:80px 0px;
+        padding-bottom: 50px;
+        height: fit-content;
+        background-color: var(--picton-blue);
+        font-family: 'Hachi Maru Pop', cursive;
+        box-shadow: 0px 5px 20px #ffffff;
+    }
+
+    /*FACEBOOK*/
+.facebook{
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin: 2%;
+    padding: 15px;
+    width:fit-content;
+    font-size: 30px;
+    box-shadow: 0px 1px 15px #0700e1;
+    background-color: #0800ff;
+    transition: .5s ease;
+}
+.facebook a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.facebook:hover{
+    transition: .5s ease;
+    transform: scale(1.2);
+    background-color: var(--facebook);
+    color: #ffffff;
+}
+
+/*INSTAGRAM*/
+.redes .instagram{
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin: 2%;
+    padding: 15px;
+    width:fit-content;
+    font-size: 30px;
+    background-image: var(--instagram);
+    box-shadow: 0px 1px 15px #ed4908;
+    transition: .5s ease;
+}
+.instagram a{
+    text-decoration: none;
+    color: #fff;
+}
+.instagram:hover{
+    transition: .5s ease;
+    transform: scale(1.2);
+}
+
+/*LINKEDIN*/
+.linkedin{
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    margin: 2%;
+    padding: 15px;
+    width:fit-content;
+    font-size: 30px;
+    box-shadow: 0px 1px 15px #0700e1;
+    background-color: #0800ff;
+    transition: .5s ease;
+}
+.linkedin a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.linkedin:hover{
+    transition: .5s ease;
+    transform: scale(1.2);
+    background-color: var(--linkedin);
+    color: #ffffff;
+}
+
+#formulario{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: grid;
+    gap: 1rem;
+}
+
+.nombre, .asunto, .correo, .mensaje, .btn_enviar{
+    text-align: center;
+    border-radius: 10px;
+    font-size: auto;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 5px 10px var(--prussian-blue);
+}
+.btn_enviar{
+    background-color: var(--green-light);
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+#proyectos{
+    font-family: 'Hachi Maru Pop', cursive;
+    height: fit-content;
+    padding: 80px 0px;
+    background-color: var(--prussian-blue);
+    color: var(--white);
+    box-shadow: 0px 5px 20px #000;
+}
+#proyectos h5{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.links-img{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.listos_p{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: var(--green-light);
+    text-shadow: #000 3px 3px 10px;
+}
+#pr_listos a img{
+    height: 300px;
+    width: auto;
+    border: solid 1px #000;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#pr_doing{
+    border: none;
+}
+.doing_p{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: var(--green-light);
+    text-shadow: #000 3px 3px 10px;}
+
+
+}
+
+
+
+
+
+
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media(min-width: 1400px) {  }
